@@ -1,7 +1,8 @@
 package entities;
 
 import javax.persistence.*;
-
+//https://dzone.com/articles/all-jpa-annotations-mapping-annotations
+//https://www.petrikainulainen.net/programming/spring-framework/spring-data-jpa-tutorial-part-two-crud/
 @Entity
 @Table(name = "car")
 public class car {
