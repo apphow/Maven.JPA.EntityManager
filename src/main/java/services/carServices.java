@@ -11,16 +11,5 @@ public class carServices {
     private EntityManager entityManager = emf.createEntityManager();
     private EntityTransaction trans = entityManager.getTransaction();
 
-  /*  public Car createCar(int id, String make, String model, int year, String color, int vin) {
 
-        Car car = new Car();
-        car.setId(id);
-        car.setMake(make);
-        car.set
-
-
-
-}
-}
-   */
 }
