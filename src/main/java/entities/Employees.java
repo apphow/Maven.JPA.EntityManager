@@ -1,4 +1,4 @@
-package entities.Models;
+package entities;
 
 public class Employees {
 

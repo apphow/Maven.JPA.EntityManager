@@ -1,26 +1,40 @@
-package entities.Models;
+package entities;
 
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
 
-//https://dzone.com/articles/all-jpa-annotations-mapping-annotations
-//https://www.petrikainulainen.net/programming/spring-framework/spring-data-jpa-tutorial-part-two-crud/
-@Entity(name = "car")
+@Entity
 @Table(name = "car")
-class Car {
-
+public class car {
     @Id
-    @GeneratedValue
-    private int id;
+    @GeneratedValue()
+    int id;
 
-    @OneToMany()
-    private Set<Car> make = new HashSet<Car>();
+    @Column(name = "make")
+            private String make;
 
+    @Column(name = "model")
     private String model;
+
+    @Column(name = "year")
     private int year;
+
+    @Column(name = "color")
     private String color;
+
+    @Column(name = "vin")
     private int vin;
+
+    public car() {
+    }
+
+    public car(int id, String make, String model, int year, String color, int vin){
+        this.id = id;
+        this.make = make;
+        this.model = model;
+        this.year = year;
+        this.color = color;
+        this.vin = vin;
+    }
 
     public int getId() {
         return id;
@@ -30,11 +44,11 @@ class Car {
         this.id = id;
     }
 
-    public Set<Car> getMake() {
+    public String getMake() {
         return make;
     }
 
-    public void setMake(Set<Car> make) {
+    public void setMake(String make) {
         this.make = make;
     }
 
@@ -69,8 +83,4 @@ class Car {
     public void setVin(int vin) {
         this.vin = vin;
     }
-
-    public Car() {
-    }
 }
-
